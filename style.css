@@ -1,0 +1,253 @@
+/* Felles */
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    height: 50px;
+    width: 100%;
+    background-color: #077BC2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* flex: 1 1 0px; */
+    margin: 0px 0px 5px 0px;
+}
+
+.searchbar input {
+    width: 100%;
+    min-width: 150px;
+    outline: none;
+    margin: 0px 0px 0px 0px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 400px; */
+}
+
+nav ul li {
+    margin: 0 50px;
+    color: white;
+    font-size: 20px;
+}
+
+.navbar{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: flex-start;
+    width: inherit;
+}
+
+body {
+    margin: 0px;
+    /* background-color: rgba(04, 28, 44, 1); */
+    /* background-image: linear-gradient(to bottom, rgba(04,28,44,0.7), 
+     rgba(04,28,44,1)); */
+     background: rgb(4,28,44);
+     background: linear-gradient(143deg,
+     rgba(4,28,44,1) 0%,
+     rgba(21,44,59,1) 51%,
+     rgba(87,103,114,1) 100%);
+     font-family: Arial, Helvetica, sans-serif;
+     color: white;
+}
+
+.logo img {
+    display: inline-block;
+    width: 75px;
+    margin: 8px 0px 8px 50px;
+}
+
+.myaccount {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 0px 0px 85px;
+}
+
+.myaccount img {
+    width: 25px;
+    margin: 0px 0 5px 0;
+} 
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(7,123,194,0.6);
+    height: 40px;
+    width: 100%;
+    /* position: absolute;
+    bottom: 0; */
+}
+
+footer > p {
+    display: flex;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    padding: 0 30px 0 0;
+}
+
+/* Forside */
+
+.mainpage {
+    background: rgb(4,28,44);
+    background: linear-gradient(360deg,
+     rgba(4,28,44,1) 0%,
+     rgba(21,44,59,1) 51%,
+     rgba(111,132,146,1) 100%);
+}
+
+.mainlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.mainlogo img {
+    display: inline-block;
+    width: 200px;
+}
+
+.films {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0px 25px 0px 25px;
+    /* grid-template-columns: auto auto auto auto; */
+}
+
+figure {
+    margin: 0px;
+    text-align: center;
+    /* justify-content: center; */
+    color: white;
+    font-size: 16px;
+}
+
+figure img {
+    /* display: flex;
+    justify-content: center; */
+    width: 275px;
+    margin: 0px;
+}
+
+h2 {
+    margin: 0px 0px 5px 50px;
+    /* color: white; */
+}
+
+.films-new {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0px 25px 75px 25px;
+    /* grid-template-columns: auto auto auto auto; */
+}
+
+#new {
+    margin-top: 40px;
+}
+
+
+/* Filmpage */
+
+header {grid-area: header;}
+aside {grid-area: poster;}
+main {grid-area: desc;}
+.content {grid-area: film;}
+footer {grid-area: footer;}
+.buttons {grid-area: buttons;}
+
+.gridcontainer-filmpage {
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header'
+    'poster poster desc   desc   film   film'
+    'poster poster desc   desc   film   film'
+    'poster poster desc   desc   buttons buttons'
+    'footer footer footer footer footer footer';
+}
+
+
+aside img {
+    width: 250px;
+    margin: 50px 0 50px 50px;
+}
+
+
+.film-desc {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 30px 50px;
+}
+
+.film-desc > h2 {
+    margin: 0px;
+    font-size: 18px;
+}
+
+.film-desc > h1 {
+    margin: 0px;
+}
+
+.film-desc > p {
+    margin: 12px 0 0 0;
+}
+
+.content {
+    flex-wrap: wrap;
+    margin: 50px 50px 0px 50px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0px 50px 0px;
+}
+
+.buttons > button {
+    width: 125px;
+    padding: 10px;
+    border: #2D9DA2 solid 2px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.content > button:hover {
+    background-color: #2D9DA2;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),
+                0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.burger {
+    display: none;
+}
+
+@media (max-width: 768px){
+    .navbar {
+        display: none;
+    }
+    .burger {
+        display: inline-block;
+        font-size: 20px;
+    }
+}
