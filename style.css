@@ -1,5 +1,11 @@
 /* Felles */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 ul {
     list-style-type: none;
 }
@@ -24,15 +30,24 @@ header {
     align-items: center;
     width: 100%;
     /* flex: 1 1 0px; */
-    margin: 0px 0px 5px 0px;
+    margin: 3px 0px 5px 0px;
 }
 
 .searchbar input {
     width: 100%;
-    min-width: 150px;
+    min-width: 100px;
+    height: 25px;
     outline: none;
-    margin: 0px 0px 0px 0px;
+    /* margin: 0px 0px 0px 0px; */
 }
+
+.searchbar button {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    padding: 10px 10px;
+}
+
 
 nav ul{
     display: flex;
@@ -50,7 +65,7 @@ nav ul li {
 .navbar{
     display: flex;
     /* justify-content: space-around; */
-    align-items: flex-start;
+    align-items: center;
     width: inherit;
 }
 
@@ -76,9 +91,9 @@ body {
 
 .myaccount {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    margin: 0px 0px 0px 85px;
+    margin: 0px 0px 0px 35px;
 }
 
 .myaccount img {
@@ -98,6 +113,7 @@ footer {
 
 footer > p {
     display: flex;
+    align-items: center;
     text-align: center;
     font-size: 12px;
     color: white;
@@ -197,6 +213,7 @@ aside img {
     display: flex;
     flex-direction: column;
     margin: 50px 0 30px 50px;
+    width: 100%;
 }
 
 .film-desc > h2 {
@@ -231,13 +248,13 @@ aside img {
     cursor: pointer;
 }
 
-.content > button:hover {
+.buttons > button:hover {
     background-color: #2D9DA2;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),
                 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.burger {
+.hamburger {
     display: none;
 }
 
@@ -245,8 +262,60 @@ aside img {
     .navbar {
         display: none;
     }
-    .burger {
-        display: inline-block;
+    .hamburger {
+        display: flex;
         font-size: 20px;
+        color: black;
+        justify-content: flex-end;
+        align-items: center;
     }
+    .myaccount {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0px 10px 0px 0px;
+    }
+    .logo img {
+        display: inline-block;
+        width: 75px;
+        margin: 8px 10px 13px 10px;
+    }
+    .searchbar{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        /* flex: 1 1 0px; */
+        margin: 3px 0px 5px 0px;
+    }
+    header {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr 1fr;
+        /* height: 50px;
+        width: 100%;
+        background-color: #077BC2;
+        font-family: Arial, Helvetica, sans-serif; */
+    }
+    aside {
+        display: none;
+    }
+    .gridcontainer-filmpage {
+        display: grid;
+        grid-template-areas: 
+        'header header'
+        'desc   desc'
+        'film   film'
+        'buttons   buttons'
+        'footer footer';
+    }
+    
+    .film-desc {
+        width: 80%;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    
 }
