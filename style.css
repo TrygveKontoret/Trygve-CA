@@ -81,6 +81,7 @@ body {
      rgba(87,103,114,1) 100%);
      font-family: Arial, Helvetica, sans-serif;
      color: white;
+     background-repeat: no-repeat;
 }
 
 .logo img {
@@ -146,9 +147,18 @@ footer > p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 0px 25px 0px 25px;
+    margin: 0px 25px 50px 25px;
     /* grid-template-columns: auto auto auto auto; */
 }
+
+.popular-films {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0px 25px 50px 25px;
+    /* grid-template-columns: auto auto auto auto; */
+}
+
 
 figure {
     margin: 0px;
@@ -166,17 +176,17 @@ figure img {
 }
 
 h2 {
-    margin: 0px 0px 5px 50px;
+    margin: 0px 0px 10px 50px;
     /* color: white; */
 }
 
-.films-new {
+/* .films-new {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 0px 25px 75px 25px;
-    /* grid-template-columns: auto auto auto auto; */
-}
+    grid-template-columns: auto auto auto auto;
+} */
 
 #new {
     margin-top: 40px;
@@ -188,7 +198,7 @@ h2 {
 header {grid-area: header;}
 aside {grid-area: poster;}
 main {grid-area: desc;}
-.content {grid-area: film;}
+.video-container {grid-area: film;}
 footer {grid-area: footer;}
 .buttons {grid-area: buttons;}
 
@@ -212,8 +222,9 @@ aside img {
 .film-desc {
     display: flex;
     flex-direction: column;
-    margin: 50px 0 30px 50px;
+    margin: 50px 50px 0px 50px;
     width: 100%;
+    padding-right: 25px;
 }
 
 .film-desc > h2 {
@@ -230,14 +241,22 @@ aside img {
 }
 
 .content {
-    margin: 50px 50px 0px 50px;
+    width: 500px;
+    height: 300px;
+    margin: 50px 45px 0px 50px;
 }
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
 
 .buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 10px 0px 50px 0px;
+    margin: 20px 0px 120px 0px;
 }
 
 .buttons > button {
@@ -258,7 +277,10 @@ aside img {
     display: none;
 }
 
-@media (max-width: 768px){
+/* Media querys */
+
+
+@media (max-width: 1200px){
     .navbar {
         display: none;
     }
@@ -266,19 +288,23 @@ aside img {
         display: flex;
         font-size: 20px;
         color: black;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
     }
     .myaccount {
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
-        margin: 0px 10px 0px 0px;
+        margin: 0px 0px 0px 22px;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
     }
     .logo img {
-        display: inline-block;
         width: 75px;
-        margin: 8px 10px 13px 10px;
+        margin: 8px 30px 8px 10px;
     }
     .searchbar{
         display: flex;
@@ -288,6 +314,7 @@ aside img {
         /* flex: 1 1 0px; */
         margin: 3px 0px 5px 0px;
     }
+
     header {
         display: grid;
         grid-template-columns: 2fr 2fr 1fr 1fr;
@@ -296,33 +323,141 @@ aside img {
         background-color: #077BC2;
         font-family: Arial, Helvetica, sans-serif; */
     }
+
+    h2 {
+        margin-left: 80px;
+    }
+
     aside {
         display: none;
     }
     .gridcontainer-filmpage {
         display: grid;
         grid-template-areas: 
-        'header header'
-        'desc   desc'
-        'film   film'
-        'buttons   buttons'
-        'footer footer';
+        'header header header'
+        'desc   desc   desc'
+        'film   film   film'
+        'buttons   buttons buttons'
+        'footer footer footer';
     }
     
     .film-desc {
         width: 80%;
     }
 
+    .content {
+        width: 650px;
+    }
+
     iframe {
+        width: 100%;
         width: 100%;
     }
 
     
 }
 
-@media (max-width: 365px){
+@media (max-width: 375px){
     iframe {
         width: 100%;
         height: 100%;
+    }
+
+    .content {
+        width: 300px;
+        height: 175px;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0 0 0;
+        height: 250px;
+    }
+    .buttons button {
+        margin: 10px;
+    }
+    h2 {
+        margin-left: 50px;
+    }
+}
+
+@media (min-width: 1400px){
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navbar ul li {
+        margin: 0 150px;
+    }
+   
+    figure {
+        margin: 0px;
+        text-align: center;
+        /* justify-content: center; */
+        color: white;
+        font-size: 16px;
+    }
+    
+    figure img {
+        /* display: flex;
+        justify-content: center; */
+        width: 375px;
+        margin: 0px;
+    }
+
+    .logo {
+        margin-left: 44px
+    }
+
+    .myaccount{
+        margin-left: 20px;
+    }
+
+    h2 {
+        margin: 0 0 10px 95px;
+    }
+
+
+
+
+    .gridcontainer-filmpage {
+        display: grid;
+        grid-template-areas: 
+        'header header header header '
+        'poster poster desc   desc   '
+        'poster poster film   film   '
+        'poster poster film   film   '
+        'poster poster buttons buttons'
+        'footer footer footer footer ';
+    }
+    .film-desc {
+        width: 800px;
+        margin: 50px 0 0 150px;
+
+    }
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        width: 1000px;
+        margin: 50px 0 0 150px;
+    }
+
+    aside img {
+        width: 85%;
+    }
+    
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+   
+    .buttons {
+        display: flex;
+        justify-content: space-evenly;
     }
 }
