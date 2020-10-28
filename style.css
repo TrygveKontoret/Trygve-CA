@@ -387,6 +387,69 @@ aside img {
 }
 
 
+/* Sign in */
+
+.sign-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #077BC2;
+    max-width: 350px;
+    margin: 300px auto 0px auto;
+    height: auto;
+}
+
+.sign-in div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: inherit;
+    /* padding: 20px 0px; */
+    width: 350px;
+}
+
+.sign-in div p {
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #077bc2;
+    max-width: 350px;
+    height: auto;
+    padding-top: 10px;
+    margin: 0px auto 350px auto;
+   
+}
+.textbox input {
+    width: 300px;
+    height: 30px;
+    outline: none;
+    font-size: 15px;
+    margin: 20px;
+    
+}
+
+.textbox button {
+    width: 100%;
+    border: none;
+    height: 40px;
+    font-size: 20px;
+    background-color: #2D9DA2;
+    color: white;
+}
+
+#create-account {
+    border-bottom: 1px solid grey;
+}
+
 
 /* Media querys */
 
@@ -607,7 +670,7 @@ aside img {
     }
     .film-desc {
         width: 800px;
-        margin: 50px 0 0 150px;
+        margin: 50px 0 0 195px;
 
     }
     .content {
@@ -616,11 +679,12 @@ aside img {
         align-items: center;
         height: 500px;
         width: 1000px;
-        margin: 50px 0 0 150px;
+        margin: 50px 0 0 195px;
     }
 
     aside img {
         width: 85%;
+        margin-left: 95px;
     }
     
     /* iframe {
