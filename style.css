@@ -22,7 +22,7 @@ h1 {
 }
 
 figcaption {
-    padding-top: 10px;
+    padding: 10px 0px;
 }
 
 header {
@@ -156,6 +156,7 @@ footer > p {
 .films {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     margin: 0px 25px 50px 25px;
 }
 
@@ -475,9 +476,9 @@ aside img {
         margin: 20px;
     }
 
-    .films figure:nth-child(4) {
+    /* .films figure:nth-child(4) {
         display: none;
-    }
+    } */
 
     .search-result {
         display: flex;
@@ -529,7 +530,7 @@ aside img {
     }
 
     h2 {
-        margin-left: 50px;
+        margin-left: 60px;
     }
 
     .films {
@@ -537,7 +538,7 @@ aside img {
         flex-wrap: wrap;
     }
 
-    .films figure:nth-child(3) {
+    .films figure:nth-child(4) {
         display: none;
     }
 
