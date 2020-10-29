@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In | SquareEyes</title>
+    <title>My Account | SquareEyes</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
 </head>
@@ -29,23 +29,30 @@
            <img src="images/MyAccount.svg" alt="my account">
         </div>
         </header>
-        <div class="sign-in">
-           <div> 
-                <p>Sign in</p>
-               <a href="/CreateAccount.html"><p id="create-account">Create account</p></a>
-            </div>
-        </div>
-        <div class="textbox">
-            <input type="text" placeholder=" Email">
-            <input type="text" placeholder=" Password">
-            <button>Sign in</button>
-        </div>
+    <h1>My Account</h1>
+    <h2>Account Details</h2>
+        <main class="account-det">
+            <form>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br>
+                <label for="oldpw"> Old password:</label><br>
+                <input type="text" id="oldpw" name="oldpw"><br>
+                <label for="newpw"> New password:</label><br>
+                <input type="text" id="newpw" name="newpw"><br>
+                <label for="confirm"> Confirm password:</label><br>
+                <input type="text" id="confirm" name="confirm"><br>
+            </form>
+        </main>
 
-
-        <footer>
-            <p>Customer Support:</p>
-            <p>+4796695230</p>
-            <p>Support@squareeyes.com</p>
-        </footer>
+    <footer>
+        <p>Customer Support:</p>
+        <p>+4796695230</p>
+        <p>Support@squareeyes.com</p>
+    </footer>
+    
 </body>
 </html>
