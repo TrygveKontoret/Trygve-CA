@@ -27,6 +27,7 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 50px 0 50px 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 figcaption {
@@ -105,6 +106,7 @@ body {
      color: white;
      background-repeat: no-repeat;
 }
+
 
 .logo img {
     display: inline-block;
@@ -295,17 +297,18 @@ aside img {
 }
 
 .buttons > button {
-    width: 125px;
+    width: 200px;
     padding: 10px;
-    border: #2D9DA2 solid 2px;
-    background-color: white;
+    border: white solid 1px;
+    background-color: transparent;
     cursor: pointer;
+    color: white;
+    font-size: 18px;
 }
 
-.buttons > button:hover {
-    background-color: #2D9DA2;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),
-                0 17px 50px 0 rgba(0,0,0,0.19);
+.buttons button:hover {
+    background-color: grey;
+    border: transparent 1px solid;
 }
 
 .hamburger {
@@ -460,6 +463,10 @@ aside img {
     margin-top: 40px;
 }
 
+.textbox a {
+    width: 100%;
+}
+
 #create-account {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     opacity: 0.5;
@@ -474,21 +481,6 @@ aside img {
 
 .sign-in a{
     width: 100%;
-}
-
-.account-det {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: auto;
-    margin: 0 auto 100px auto;
-}
-
-.account-det form input {
-    width: 250px;
-    height: 25px;
-    margin-bottom: 20px;
 }
 
 .dob {
@@ -507,6 +499,127 @@ aside img {
 #year {
     width: 55px;
 }
+
+/* Account  */
+
+.account {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 50px auto 100px auto;
+} 
+
+.edit-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    /* margin: 0 auto 100px auto; */
+    background-color: #077BC2;
+    width: 300px;
+}
+
+.edit-account form {
+    margin-top: 20px;
+}
+
+.edit-account form input {
+    width: 250px;
+    height: 25px;
+    margin-bottom: 20px;
+}
+
+.edit-account button{
+    float: right;
+    width: 50%;
+    border: none;
+    height: 40px;
+    font-size: 20px;
+    background-color: #2D9DA2;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.details {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#cancel {
+    width: 120px;
+    /* margin-right: 10px; */
+    background-color: #a22d32;
+}
+
+#submit {
+    width: 120px;
+    margin-right: 10px;
+}
+
+#update {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.edit h2 {
+    margin: 20px auto 10px;
+}
+
+.card h2 {
+    margin: 20px auto 10px auto;
+}
+
+.details h2 {
+    margin: 20px auto 10px auto;
+}
+
+.details h3 {
+    margin-top: 40px;
+}
+
+.details div {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 250px;
+    height: 25px;
+    color: black;
+    margin: 10px auto;
+}
+
+.details p {
+    margin-left: 5px;
+}
+
+.details img {
+    width: 200px;
+    border-radius: 20px;
+    margin: 15px auto 10px auto;
+}
+
+/* Watch now */
+
+.watchnow {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    /* margin: 100px auto; */
+}
+
+.watchnow iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 /* Media querys */
 
@@ -582,18 +695,10 @@ aside img {
         width: 650px;
     }
 
-    /* iframe {
-        width: 100%;
-        width: 100%;
-    } */
-
-    .buttons {
-        display: flex;
-        flex-direction: column;
-    }
 
     .buttons button {
         margin: 20px;
+        background-color: grey;
     }
 
     /* .films figure:nth-child(4) {
@@ -632,6 +737,20 @@ aside img {
         padding: 40px 0 0px 0;
         margin: 0px auto 310px auto;
     }
+
+    .account {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    } 
+
+    .edit-account {
+        margin: 20px auto;        
+    }
+
+    .watchnow {
+        margin: 100px auto 420px auto;
+    }
     
 }
 
@@ -653,31 +772,15 @@ aside img {
         height: 150px;
         margin: 0 0 20px 40px;
     }
-
-    /* iframe {
-        width: 100%;
-
-    } */
-
-    .buttons{
-        display: flex;
-        flex-direction: column;
-        margin: 10px 0 0 0;
-        width: 375px;
-        height: 250px;
-    }
+  
 
     .buttons button {
         margin: 10px;
+        background-color: grey;
     }
 
     h2 {
         margin-left: 60px;
-    }
-
-    .films {
-        display: flex;
-        flex-wrap: wrap;
     }
 
     .films figure:nth-child(4) {
@@ -685,16 +788,16 @@ aside img {
     }
 
     .search-result {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #077BC2;
-        max-width: 350px;
-        margin: 10px auto 150px auto;
-        height: auto;
+        margin: 10px auto 150px auto;     
+    }
+
+    .edit-account {
+        margin: 20px auto;
     }
 }
+
+
+
 
 @media (min-width: 1400px){
 
@@ -809,4 +912,11 @@ aside img {
         padding: 40px 0 0px 0;
         margin: 0px auto 300px auto;
     }
+
+    .account {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 50px auto 250px auto;
+    } 
 }
