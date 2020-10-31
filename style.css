@@ -14,10 +14,6 @@ a {
     text-decoration: none;
     color: white;
 }
-/* 
-a:hover{
-    cursor: pointer;
-} */
 
 button:hover {
     cursor: pointer;
@@ -49,7 +45,7 @@ header {
     align-items: center;
     width: 100%;
     /* flex: 1 1 0px; */
-    margin: 3px 0px 5px 0px;
+    margin: 2px 0px 5px 0px;
 }
 
 .searchbar input {
@@ -57,7 +53,6 @@ header {
     min-width: 100px;
     height: 25px;
     outline: none;
-    /* margin: 0px 0px 0px 0px; */
 }
 
 .searchbar button {
@@ -123,7 +118,7 @@ body {
 
 .myaccount img {
     width: 25px;
-    margin: 0px 0 5px 0;
+    margin: 0px 0 0px 0;
 } 
 
 footer {
@@ -296,7 +291,7 @@ aside img {
     margin: 30px 0px 120px 0px;
 }
 
-.buttons > button {
+.buttons > a button {
     width: 200px;
     padding: 10px;
     border: white solid 1px;
@@ -594,7 +589,7 @@ aside img {
     width: 250px;
     height: 25px;
     color: black;
-    margin: 10px auto;
+    margin: 15px auto;
 }
 
 .details p {
@@ -624,14 +619,13 @@ aside img {
     height: 100%;
 }
 
-
 /* Media querys */
-
 
 @media (max-width: 1120px){
     .navbar {
         display: none;
     }
+
     .hamburger {
         display: flex;
         font-size: 20px;
@@ -639,6 +633,7 @@ aside img {
         justify-content: center;
         align-items: center;
     }
+
     .myaccount {
         display: flex;
         justify-content: flex-start;
@@ -650,26 +645,19 @@ aside img {
         display: flex;
         justify-content: center;
     }
+
     .logo img {
         width: 75px;
         margin: 8px 30px 8px 10px;
     }
+    
     .searchbar{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 100%;
-        /* flex: 1 1 0px; */
         margin: 3px 0px 5px 0px;
     }
 
     header {
         display: grid;
         grid-template-columns: 2fr 2fr 1fr 1fr;
-        /* height: 50px;
-        width: 100%;
-        background-color: #077BC2;
-        font-family: Arial, Helvetica, sans-serif; */
     }
 
     h2 {
@@ -699,47 +687,21 @@ aside img {
         width: 650px;
     }
 
-
-    .buttons button {
+    .buttons a button {
         margin: 20px;
         background-color: grey;
     }
 
-    /* .films figure:nth-child(4) {
-        display: none;
-    } */
-
     .search-result {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #077BC2;
-        max-width: 350px;
         margin: 100px auto 300px auto;
-        height: auto;
     }
 
     .sign-in {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #077BC2;
-        max-width: 350px;
         margin: 200px auto 0px auto;
-        height: auto;
     }
 
     .textbox {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        background-color: #077bc2;
-        max-width: 350px;
-        height: auto;
-        padding: 40px 0 0px 0;
-        margin: 0px auto 310px auto;
+        margin: 0px auto 460px auto;
     }
 
     .account {
@@ -760,17 +722,6 @@ aside img {
 
 @media (max-width: 400px){
 
-    /* .gridcontainer-filmpage {
-        display: grid;
-        grid-template-areas: 
-        'header'
-        'desc'
-        'film'
-        'buttons'
-        'footer';
-    } */
-
-
     .content {
         width: 300px;
         height: 150px;
@@ -782,7 +733,7 @@ aside img {
         flex-direction: column;
     }
 
-    .buttons button {
+    .buttons a button {
         margin: 10px;
         background-color: grey;
     }
@@ -802,35 +753,20 @@ aside img {
     .edit-account {
         margin: 20px auto;
     }
+
+    .details {
+        padding-bottom: 10px;
+    }
 }
 
-
-
-
 @media (min-width: 1400px){
-
-    .navbar {
-        display: flex;
-        justify-content: space-around;
-    }
 
     .navbar ul li {
         margin: 0 150px;
     }
-   
-    figure {
-        margin: 0px;
-        text-align: center;
-        /* justify-content: center; */
-        color: white;
-        font-size: 16px;
-    }
-    
+       
     figure img {
-        /* display: flex;
-        justify-content: center; */
         width: 375px;
-        margin: 0px;
     }
 
     .logo {
@@ -845,9 +781,6 @@ aside img {
         margin: 0 0 10px 95px;
     }
 
-
-
-
     .gridcontainer-filmpage {
         display: grid;
         grid-template-areas: 
@@ -858,14 +791,14 @@ aside img {
         'poster poster buttons buttons'
         'footer footer footer footer ';
     }
+
     .film-desc {
         width: 800px;
         margin: 50px 0 0 195px;
-
     }
+
     .content {
         display: flex;
-        justify-content: center;
         align-items: center;
         height: 500px;
         width: 1000px;
@@ -877,54 +810,23 @@ aside img {
         margin-left: 95px;
     }
     
-    /* iframe {
-        width: 100%;
-        height: 100%;
-    } */
-
     .search-result {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #077BC2;
-        max-width: 350px;
         margin: 50px auto 300px auto;
-        height: auto;
     }
    
     .buttons {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
         margin: 50px 0 50px 0;
     }
 
     .sign-in {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #077BC2;
-        max-width: 350px;
         margin: 300px auto 0px auto;
-        height: auto;
     }
+
     .textbox {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        background-color: #077bc2;
-        max-width: 350px;
-        height: auto;
-        padding: 40px 0 0px 0;
         margin: 0px auto 300px auto;
     }
 
     .account {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
         margin: 50px auto 250px auto;
     } 
 }
