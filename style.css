@@ -34,7 +34,6 @@ header {
     display: grid;
     grid-template-columns: 1fr 3fr 3fr 1fr;
     height: 50px;
-    /* width: 100%; */
     background-color: #077BC2;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -44,7 +43,6 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* flex: 1 1 0px; */
     margin: 2px 0px 5px 0px;
 }
 
@@ -61,7 +59,6 @@ header {
     height: 25px;
     padding: 10px 10px;
 }
-
 
 nav ul{
     display: flex;
@@ -85,21 +82,16 @@ nav ul li {
     width: inherit;
 }
 
-
-
 body {
     margin: 0px;
-    /* background-color: rgba(04, 28, 44, 1); */
-    /* background-image: linear-gradient(to bottom, rgba(04,28,44,0.7), 
-     rgba(04,28,44,1)); */
-     background: rgb(4,28,44);
-     background: linear-gradient(143deg,
-     rgba(4,28,44,1) 0%,
-     rgba(21,44,59,1) 51%,
-     rgba(87,103,114,1) 100%);
-     font-family: Arial, Helvetica, sans-serif;
-     color: white;
-     background-repeat: no-repeat;
+    background: rgb(4,28,44);
+    background: linear-gradient(143deg,
+    rgba(4,28,44,1) 0%,
+    rgba(21,44,59,1) 51%,
+    rgba(87,103,114,1) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-repeat: no-repeat;
 }
 
 
@@ -126,9 +118,7 @@ footer {
     justify-content: center;
     background-color: rgba(7,123,194,0.6);
     height: 40px;
-    width: 100%;
-    /* position: absolute;
-    bottom: 0; */
+    width: 100%;   
 }
 
 footer > p {
@@ -145,9 +135,9 @@ footer > p {
 .mainpage {
     background: rgb(4,28,44);
     background: linear-gradient(360deg,
-     rgba(4,28,44,1) 0%,
-     rgba(21,44,59,1) 51%,
-     rgba(111,132,146,1) 100%);
+    rgba(4,28,44,1) 0%,
+    rgba(21,44,59,1) 51%,
+    rgba(111,132,146,1) 100%);
 }
 
 .mainlogo {
@@ -169,46 +159,25 @@ footer > p {
     margin: 0px 25px 50px 25px;
 }
 
-/* .popular-films {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 0px 25px 50px 25px;
-} */
-
-
 figure {
     margin: 0px;
     text-align: center;
-    /* justify-content: center; */
     color: white;
     font-size: 16px;
 }
 
 figure img {
-    /* display: flex;
-    justify-content: center; */
     width: 275px;
     margin: 0px;
 }
 
 h2 {
     margin: 0px 0px 10px 50px;
-    /* color: white; */
 }
-
-/* .films-new {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 0px 25px 75px 25px;
-    grid-template-columns: auto auto auto auto;
-} */
 
 #new {
     margin-top: 40px;
 }
-
 
 /* Filmpage */
 
@@ -229,18 +198,11 @@ footer {grid-area: footer;}
     'footer footer footer footer footer footer';
 }
 
-/* aside {
-    width: 100%;
-    height: auto;
-    margin: 0 50px 0 0;
-} */
-
 aside img {
     width: 275px;
     height: auto;
     margin: 50px 50px 50px 50px;
 }
-
 
 .film-desc {
     display: flex;
@@ -277,12 +239,6 @@ aside img {
     width: 100%;
     height: auto;
 }
-
-/* iframe {
-    width: 100%;
-    height: 100%;
-} */
-
 
 .buttons {
     display: flex;
@@ -326,7 +282,6 @@ aside img {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 20px auto 20px auto; */
     background-color: #077bc2;
     max-width: 350px;
 }
@@ -340,7 +295,6 @@ aside img {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
-    
 }
 
 .searchbar-small button {
@@ -401,7 +355,6 @@ aside img {
     padding-right: 10px;
 }
 
-
 /* Sign in / Create Account */
 
 .sign-in {
@@ -419,7 +372,6 @@ aside img {
     flex-direction: row;
     justify-content: space-around;
     height: inherit;
-    /* padding: 20px 0px; */
     width: 350px;
 }
 
@@ -449,7 +401,6 @@ aside img {
     outline: none;
     font-size: 15px;
     margin: 10px;
-    
 }
 
 .textbox button {
@@ -514,7 +465,6 @@ aside img {
     align-items: center;
     flex-direction: column;
     height: auto;
-    /* margin: 0 auto 100px auto; */
     background-color: #077BC2;
     width: 300px;
 }
@@ -552,7 +502,6 @@ aside img {
 
 #cancel {
     width: 120px;
-    /* margin-right: 10px; */
     background-color: #a22d32;
 }
 
@@ -608,7 +557,6 @@ aside img {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
-    /* margin: 100px auto; */
 }
 
 .watchnow iframe {
